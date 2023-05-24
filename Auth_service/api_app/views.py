@@ -1,5 +1,7 @@
-from django.http import HttpResponse
+from rest_framework_simplejwt.views import TokenObtainPairView
+
+from .serializers import SignInTokenObtainPairSerializer
 
 
-def index(request):
-    return HttpResponse("Hello from auth")
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = SignInTokenObtainPairSerializer

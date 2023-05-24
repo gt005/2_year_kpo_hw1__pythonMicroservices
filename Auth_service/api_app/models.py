@@ -13,10 +13,10 @@ class UserManager(BaseUserManager):
     def create_user(self, username: str, email: str, password: str = None):
         """ Создание пользователя по username и email. """
         if username is None:
-            raise TypeError('Users must have a username.')
+            raise TypeError('Username не должен быть пустым.')
 
         if email is None:
-            raise TypeError('Users must have an email address.')
+            raise TypeError('Почта не должна быть пустой.')
 
         user = self.model(username=username, email=self.normalize_email(email))
         user.set_password(password)
