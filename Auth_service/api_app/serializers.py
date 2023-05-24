@@ -5,6 +5,10 @@ from .models import CustomUser
 
 
 class SignInTokenObtainPairSerializer(TokenObtainPairSerializer):
+    """
+    Переопределяем стандартный сериализатор для получения токена со
+    статусом(ролью) пользователя и его id.
+    """
     @classmethod
     def get_token(cls, user):
         token = super().get_token(user)
@@ -17,6 +21,10 @@ class SignInTokenObtainPairSerializer(TokenObtainPairSerializer):
 
 
 class SignUpSerializer(serializers.ModelSerializer):
+    """
+    Сериализатор для регистрации пользователя.
+    Автоматически все поля валидируются и сохраняются в БД.
+    """
     class Meta:
         model = CustomUser
         fields = ['username', 'email', 'password']
