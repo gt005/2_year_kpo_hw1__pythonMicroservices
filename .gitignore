@@ -1,0 +1,8 @@
+.idea
+bin
+lib
+.shared_api_env
+Order_handler_service/.api_env
+Order_handler_service/.database_env
+Auth_service/.api_env
+Auth_service/.database_env

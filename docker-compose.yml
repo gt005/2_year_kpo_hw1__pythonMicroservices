@@ -1,0 +1,69 @@
+version: "3"
+
+services:
+  IDZ_microservices__auth_api_postgres_db:
+    image: postgres:15.2-alpine
+    container_name: IDZ_microservices__auth_api_postgres
+    env_file: Auth_service/.database_env
+    volumes:
+      - IDZ_microservices__auth_api_db:/var/lib/postgresql/data/
+    networks:
+      - auth_network
+
+  IDZ_microservices__order_handler_postgres_db:
+    image: postgres:15.2-alpine
+    container_name: IDZ_microservices__order_handler_postgres
+    env_file: Order_handler_service/.database_env
+    volumes:
+      - IDZ_microservices__order_handler_db:/var/lib/postgresql/data/
+    networks:
+      - order_handler_network
+
+  idz_microservices__auth_api:
+    build:
+      context: Auth_service/
+      dockerfile: api_dockerfile
+    container_name: IDZ_microservices__auth_api__django
+    env_file:
+      - Auth_service/.api_env
+      - .shared_api_env
+    depends_on:
+      - IDZ_microservices__auth_api_postgres_db
+    networks:
+      - auth_network
+
+  idz_microservices__order_handler:
+    build:
+      context: Order_handler_service/
+      dockerfile: api_dockerfile
+    container_name: IDZ_microservices__order_handler__django
+    env_file:
+      - Order_handler_service/.api_env
+      - .shared_api_env
+    depends_on:
+      - IDZ_microservices__order_handler_postgres_db
+    networks:
+      - order_handler_network
+
+  IDZ_microservices_nginx:
+    image: nginx:1.23
+    container_name: IDZ_microservices_nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+    depends_on:
+      - idz_microservices__auth_api
+      - idz_microservices__order_handler
+    networks:
+      - auth_network
+      - order_handler_network
+
+
+volumes:
+  IDZ_microservices__auth_api_db:
+  IDZ_microservices__order_handler_db:
+
+networks:
+  auth_network:
+  order_handler_network:
