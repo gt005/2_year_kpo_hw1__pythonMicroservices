@@ -32,7 +32,7 @@ class SignUpView(APIView):
 
 
 class GetUserDataView(APIView):
-    def post(self, request, **kwargs):
+    def get(self, request, **kwargs):
         access_token = request.headers.get('Authorization')
         if access_token is None:
             return Response(

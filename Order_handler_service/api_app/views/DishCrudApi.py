@@ -1,22 +1,36 @@
-from rest_framework.views import APIView
-from rest_framework.response import Response
-from rest_framework.permissions import AllowAny
+from rest_framework.generics import ListCreateAPIView, GenericAPIView
+from rest_framework import mixins
 
 from ..permissions import IsManager
 from ..authentications import JWTAuthentication
+from ..models import Dish
+from ..serializers import DishSerializer
 
 
-class DishCrudApi(APIView):
+class DishGetListAndCreateApi(ListCreateAPIView):
     """
-    Класс для обработки запросов на создание, удаление, изменение и получение
-    блюд.
+    Класс для обработки запросов на получение списка блюд и создание новых.
     """
     authentication_classes = [JWTAuthentication]
-    permission_classes = [AllowAny]
+    permission_classes = [IsManager]
 
-    def get(self, request, **kwargs):
-        """
-        Получение списка блюд.
-        """
-        print(request.headers.get('Authorization'))
-        return Response({'message': 'Hello, world!'})
+    queryset = Dish.objects.all()
+    serializer_class = DishSerializer
+
+
+class DishUpdateDestroy(
+    mixins.UpdateModelMixin,
+    mixins.DestroyModelMixin,
+    GenericAPIView
+):
+    authentication_classes = [JWTAuthentication]
+    permission_classes = [IsManager]
+
+    queryset = Dish.objects.all()
+    serializer_class = DishSerializer
+
+    def patch(self, request, *args, **kwargs):
+        return self.partial_update(request, *args, **kwargs)
+
+    def delete(self, request, *args, **kwargs):
+        return self.destroy(request, *args, **kwargs)
