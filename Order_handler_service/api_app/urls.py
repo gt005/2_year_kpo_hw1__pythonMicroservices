@@ -1,7 +1,8 @@
 from django.urls import path
 
-from .views import index
+
+from .views import DishCrudApi
 
 urlpatterns = [
-    path('', index),
+    path('dish/', DishCrudApi.as_view()),
 ]
