@@ -1,1 +1,2 @@
 from .DishSerializerModule import DishSerializer
+from .OrderSerializerModule import OrderSerializer

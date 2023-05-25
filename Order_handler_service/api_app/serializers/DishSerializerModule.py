@@ -23,6 +23,7 @@ class DishSerializer(serializers.ModelSerializer):
         required=False,
         read_only=True,
     )
+
     class Meta:
         model = Dish
         fields = '__all__'

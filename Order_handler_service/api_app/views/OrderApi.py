@@ -1,8 +1,10 @@
+from django.shortcuts import get_object_or_404
+
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from ..models import Dish
-from ..serializers import DishSerializer
+from ..models import Dish, Order
+from ..serializers import DishSerializer, OrderSerializer
 
 
 class ListAvailableToOrderDishes(APIView):
@@ -18,4 +20,11 @@ class ListAvailableToOrderDishes(APIView):
             many=True,
             remove_fields=['created_at', 'updated_at']
         )
+        return Response(serializer.data)
+
+
+class GetOrderDataByOrderId(APIView):
+    def get(self, request, id):
+        order = get_object_or_404(Order, id=id)
+        serializer = OrderSerializer(order)
         return Response(serializer.data)
