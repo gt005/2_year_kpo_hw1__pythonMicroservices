@@ -33,13 +33,14 @@ class SignUpView(APIView):
 
 class GetUserDataView(APIView):
     def post(self, request, **kwargs):
-        if request.POST.get('access_token') is None:
+        access_token = request.headers.get('Authorization')
+        if access_token is None:
             return Response(
                 {"message": "token is required"},
                 status=status.HTTP_400_BAD_REQUEST
             )
 
-        access_token = request.POST.get('access_token')
+        access_token = access_token.split(' ')[1]
 
         jwt_authentication = JWTAuthentication()
         validated_token = jwt_authentication.get_validated_token(access_token)
