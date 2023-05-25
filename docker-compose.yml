@@ -1,6 +1,7 @@
 version: "3"
 
 services:
+#  Для AUTH микросервиса
   IDZ_microservices__auth_api_postgres_db:
     image: postgres:15.2-alpine
     container_name: IDZ_microservices__auth_api_postgres
@@ -9,15 +10,8 @@ services:
       - IDZ_microservices__auth_api_db:/var/lib/postgresql/data/
     networks:
       - auth_network
-
-  IDZ_microservices__order_handler_postgres_db:
-    image: postgres:15.2-alpine
-    container_name: IDZ_microservices__order_handler_postgres
-    env_file: Order_handler_service/.database_env
-    volumes:
-      - IDZ_microservices__order_handler_db:/var/lib/postgresql/data/
-    networks:
-      - order_handler_network
+    ports:
+      - "5433:5432"
 
   idz_microservices__auth_api:
     build:
@@ -32,6 +26,18 @@ services:
     networks:
       - auth_network
 
+#  Для ORDER_HANDLER микросервиса
+  IDZ_microservices__order_handler_postgres_db:
+    image: postgres:15.2-alpine
+    container_name: IDZ_microservices__order_handler_postgres
+    env_file: Order_handler_service/.database_env
+    volumes:
+      - IDZ_microservices__order_handler_db:/var/lib/postgresql/data/
+    networks:
+      - order_handler_network
+    ports:
+      - "5432:5432"
+
   idz_microservices__order_handler:
     build:
       context: Order_handler_service/
@@ -45,6 +51,7 @@ services:
     networks:
       - order_handler_network
 
+#  Для NGINX
   IDZ_microservices_nginx:
     image: nginx:1.23
     container_name: IDZ_microservices_nginx

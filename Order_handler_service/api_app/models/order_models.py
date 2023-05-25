@@ -32,7 +32,7 @@ class OrderDish(models.Model):
         'Dish',
         on_delete=models.CASCADE
     )
-    quantity = models.IntegerField()
+    quantity = models.PositiveIntegerField()
     price = models.DecimalField(
         max_digits=10,
         decimal_places=2
