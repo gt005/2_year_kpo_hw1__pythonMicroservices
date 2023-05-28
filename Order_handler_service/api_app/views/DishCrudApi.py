@@ -10,6 +10,7 @@ from ..serializers import DishSerializer
 class DishGetListAndCreateApi(ListCreateAPIView):
     """
     Класс для обработки запросов на получение списка блюд и создание новых.
+    Accepts only GET and POST requests.
     """
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsManager]
@@ -23,6 +24,10 @@ class DishUpdateDestroy(
     mixins.DestroyModelMixin,
     GenericAPIView
 ):
+    """
+    Класс для обработки запросов на обновление и удаление блюд.
+    Accepts only PATCH and DELETE requests.
+    """
     authentication_classes = [JWTAuthentication]
     permission_classes = [IsManager]
 
