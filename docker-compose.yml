@@ -10,8 +10,6 @@ services:
       - IDZ_microservices__auth_api_db:/var/lib/postgresql/data/
     networks:
       - auth_network
-    ports:
-      - "5433:5432"
 
   idz_microservices__auth_api:
     build:
@@ -35,8 +33,6 @@ services:
       - IDZ_microservices__order_handler_db:/var/lib/postgresql/data/
     networks:
       - order_handler_network
-    ports:
-      - "5432:5432"
 
   idz_microservices__order_handler:
     build:

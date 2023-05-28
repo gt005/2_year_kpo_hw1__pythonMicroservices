@@ -75,7 +75,7 @@ class CreateOrder(APIView):
                 price=dishes[dish_in_order.get('dish_id')].price
             )
 
-        return Response({'message': 'Order created'})
+        return Response({'message': f'Order created with id {order.id}'})
 
 
 class ListAvailableToOrderDishes(APIView):
