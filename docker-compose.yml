@@ -48,8 +48,18 @@ services:
       - .shared_api_env
     depends_on:
       - IDZ_microservices__order_handler_postgres_db
+      - IDZ_microservices__redis
     networks:
       - order_handler_network
+
+  IDZ_microservices__redis:
+    image: redis:7-alpine
+    container_name: IDZ_microservices__redis
+    networks:
+      - auth_network
+      - order_handler_network
+    ports:
+      - "6379:6379"
 
 #  Для NGINX
   IDZ_microservices_nginx:
@@ -65,6 +75,7 @@ services:
     networks:
       - auth_network
       - order_handler_network
+
 
 
 volumes:

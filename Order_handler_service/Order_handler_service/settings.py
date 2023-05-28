@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'api_app',
     'rest_framework',
     'rest_framework_simplejwt.token_blacklist',
+    'Order_handler_service.celery'
 ]
 
 MIDDLEWARE = [
@@ -127,6 +128,8 @@ USE_I18N = True
 
 USE_TZ = True
 
+CELERY_BROKER_URL = f'redis://{os.environ.get("REDIS_HOST", "localhost")}:{os.environ.get("REDIS_PORT", "6379")}'
+CELERY_RESULT_BACKEND = f'redis://{os.environ.get("REDIS_HOST", "localhost")}:{os.environ.get("REDIS_PORT", "6379")}'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
