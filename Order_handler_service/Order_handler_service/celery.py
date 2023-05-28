@@ -13,7 +13,7 @@ from celery.schedules import crontab
 app.conf.beat_schedule = {
     'switch-next-order-status-every-10-seconds': {
         'task': 'api_app.tasks.switch_next_order_status',  # обратите внимание на путь к задаче
-        'schedule': 10.0
+        'schedule': 30.0
     }
 }
 

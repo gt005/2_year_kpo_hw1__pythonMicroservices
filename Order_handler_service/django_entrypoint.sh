@@ -8,4 +8,8 @@ done
 
 python manage.py makemigrations
 python manage.py migrate
-exec python manage.py runserver 0.0.0.0:8000
+python manage.py runserver 0.0.0.0:8000 &
+
+celery -A Order_handler_service worker --loglevel=info -B &
+
+wait
