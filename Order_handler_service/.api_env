@@ -1,0 +1,8 @@
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=UIGl2kjed238KJ
+POSTGRES_DB=IDZ_microservices__order_handler_postgres_db
+POSTGRES_HOST=IDZ_microservices__order_handler_postgres_db
+POSTGRES_PORT=5432
+
+REDIS_HOST=IDZ_microservices__redis
+REDIS_PORT=6379

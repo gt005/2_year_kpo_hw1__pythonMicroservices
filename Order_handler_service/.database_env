@@ -1,0 +1,3 @@
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=UIGl2kjed238KJ
+POSTGRES_DB=IDZ_microservices__order_handler_postgres_db

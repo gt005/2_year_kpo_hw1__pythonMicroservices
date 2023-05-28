@@ -1,0 +1,1570 @@
+{
+	"info": {
+		"_postman_id": "2fea9475-4e50-46a7-8e40-4a6916e3287b",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26270761"
+	},
+	"item": [
+		{
+			"name": "CRUD Dish с ошибкой (нет прав)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost/order_handler/dish/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"dish",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CRUD Dish с ошибкой (нет токена в headers)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/order_handler/dish/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"dish",
+								""
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 21:57:57 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "45"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Authorization header is required\"\n}"
+				}
+			]
+		},
+		{
+			"name": "CRUD Dish с ошибкой (нет токена в headers) Copy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNDQ2LCJpYXQiOjE2ODUzMTExNDYsImp0aSI6ImRiNjEzNTRlY2EwMDQ4ODA5NDQ4OTY5MDVhZjM5ZjdkIiwidXNlcl9pZCI6NCwiaXNfc3RhZmYiOmZhbHNlfQ.385_TGf0U79H9y2_q4rlajhATgNiakKRU4Yr5D_nuOM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/order_handler/dish/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"dish",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CRUD Dish с ошибкой (нет токена в headers) Copy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNDQ2LCJpYXQiOjE2ODUzMTExNDYsImp0aSI6ImRiNjEzNTRlY2EwMDQ4ODA5NDQ4OTY5MDVhZjM5ZjdkIiwidXNlcl9pZCI6NCwiaXNfc3RhZmYiOmZhbHNlfQ.385_TGf0U79H9y2_q4rlajhATgNiakKRU4Yr5D_nuOM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/order_handler/dish/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"dish",
+								""
+							]
+						}
+					},
+					"status": "Forbidden",
+					"code": 403,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 21:59:19 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "117"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"У вас недостаточно прав для выполнения данного действия.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "CRUD Dish правильная get",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNTQ2LCJpYXQiOjE2ODUzMTEyNDYsImp0aSI6IjIyMTIyMzJmNDZhNDQ4YWM4ODJhZDc1YTlmN2NmZGVkIiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.U9UhTNLtC4gHX4PiCBsw76qer6gBeHYyAu0HdPQxHUo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/order_handler/dish/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"dish",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CRUD Dish правильная get",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNTQ2LCJpYXQiOjE2ODUzMTEyNDYsImp0aSI6IjIyMTIyMzJmNDZhNDQ4YWM4ODJhZDc1YTlmN2NmZGVkIiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.U9UhTNLtC4gHX4PiCBsw76qer6gBeHYyAu0HdPQxHUo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/order_handler/dish/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"dish",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:01:04 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "181"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 2,\n        \"created_at\": \"28 May 2023 23:03:22\",\n        \"updated_at\": \"28 May 2023 23:07:04\",\n        \"name\": \"Чай\",\n        \"description\": \"Обычный чай, зеленый\",\n        \"price\": \"35.00\",\n        \"quantity\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "CRUD Dish правильная post Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNTQ2LCJpYXQiOjE2ODUzMTEyNDYsImp0aSI6IjIyMTIyMzJmNDZhNDQ4YWM4ODJhZDc1YTlmN2NmZGVkIiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.U9UhTNLtC4gHX4PiCBsw76qer6gBeHYyAu0HdPQxHUo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Кофе",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "Сильный кофе",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "50",
+							"type": "text"
+						},
+						{
+							"key": "quantity",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/order_handler/dish/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"dish",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CRUD Dish правильная post Copy",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNTQ2LCJpYXQiOjE2ODUzMTEyNDYsImp0aSI6IjIyMTIyMzJmNDZhNDQ4YWM4ODJhZDc1YTlmN2NmZGVkIiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.U9UhTNLtC4gHX4PiCBsw76qer6gBeHYyAu0HdPQxHUo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Кофе",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "Сильный кофе",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "50",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/order_handler/dish/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"dish",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:02:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "167"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, POST, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"created_at\": \"29 May 2023 01:02:09\",\n    \"updated_at\": \"29 May 2023 01:02:09\",\n    \"name\": \"Кофе\",\n    \"description\": \"Сильный кофе\",\n    \"price\": \"50.00\",\n    \"quantity\": 3\n}"
+				}
+			]
+		},
+		{
+			"name": "CRUD Dish правильная patch",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNTQ2LCJpYXQiOjE2ODUzMTEyNDYsImp0aSI6IjIyMTIyMzJmNDZhNDQ4YWM4ODJhZDc1YTlmN2NmZGVkIiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.U9UhTNLtC4gHX4PiCBsw76qer6gBeHYyAu0HdPQxHUo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/order_handler/dish/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"dish",
+						"2",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CRUD Dish правильная patch",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNTQ2LCJpYXQiOjE2ODUzMTEyNDYsImp0aSI6IjIyMTIyMzJmNDZhNDQ4YWM4ODJhZDc1YTlmN2NmZGVkIiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.U9UhTNLtC4gHX4PiCBsw76qer6gBeHYyAu0HdPQxHUo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "quantity",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "44",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/order_handler/dish/2/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"dish",
+								"2",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:02:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "180"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"created_at\": \"28 May 2023 23:03:22\",\n    \"updated_at\": \"29 May 2023 01:02:55\",\n    \"name\": \"Чай\",\n    \"description\": \"Обычный чай, зеленый\",\n    \"price\": \"44.00\",\n    \"quantity\": 10\n}"
+				}
+			]
+		},
+		{
+			"name": "CRUD Dish правильная delete",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNTQ2LCJpYXQiOjE2ODUzMTEyNDYsImp0aSI6IjIyMTIyMzJmNDZhNDQ4YWM4ODJhZDc1YTlmN2NmZGVkIiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.U9UhTNLtC4gHX4PiCBsw76qer6gBeHYyAu0HdPQxHUo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "quantity",
+							"value": "10",
+							"type": "text"
+						},
+						{
+							"key": "price",
+							"value": "44",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/order_handler/dish/2/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"dish",
+						"2",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "CRUD Dish правильная delete",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNTQ2LCJpYXQiOjE2ODUzMTEyNDYsImp0aSI6IjIyMTIyMzJmNDZhNDQ4YWM4ODJhZDc1YTlmN2NmZGVkIiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.U9UhTNLtC4gHX4PiCBsw76qer6gBeHYyAu0HdPQxHUo",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "quantity",
+									"value": "10",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "44",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/order_handler/dish/2/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"dish",
+								"2",
+								""
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:03:35 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "0"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "PATCH, DELETE, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "Получение меню",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNTQ2LCJpYXQiOjE2ODUzMTEyNDYsImp0aSI6IjIyMTIyMzJmNDZhNDQ4YWM4ODJhZDc1YTlmN2NmZGVkIiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.U9UhTNLtC4gHX4PiCBsw76qer6gBeHYyAu0HdPQxHUo",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/order_handler/get-menu/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"get-menu",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Получение меню",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExNTQ2LCJpYXQiOjE2ODUzMTEyNDYsImp0aSI6IjIyMTIyMzJmNDZhNDQ4YWM4ODJhZDc1YTlmN2NmZGVkIiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.U9UhTNLtC4gHX4PiCBsw76qer6gBeHYyAu0HdPQxHUo",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/order_handler/get-menu/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"get-menu",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:04:38 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "97"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 3,\n        \"name\": \"Кофе\",\n        \"description\": \"Сильный кофе\",\n        \"price\": \"50.00\",\n        \"quantity\": 3\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Создание заказа с ошибкой (больше чем есть товара)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 4\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/order_handler/create-order/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"create-order",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Создание заказа с ошибкой (больше чем есть товара)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 4\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/order_handler/create-order/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"create-order",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:06:34 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "62"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Insufficient quantity of dish with ID 3 in stock.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Создание заказа с ошибкой (Нет такого товара)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 5,\n            \"quantity\": 4\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/order_handler/create-order/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"create-order",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Создание заказа с ошибкой (Нет такого товара)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 5,\n            \"quantity\": 4\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/order_handler/create-order/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"create-order",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:06:59 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"Dishes with IDs 5 were not found.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Создание заказа правильное",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 2\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/order_handler/create-order/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"create-order",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Создание заказа правильное",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 2\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/order_handler/create-order/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"create-order",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:07:36 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "27"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Order created\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Просмотр заказа (в ожидании)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 2\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/order_handler/get-order-data/3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"get-order-data",
+						"3",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Просмотр заказа (в ожидании)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 2\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/order_handler/get-order-data/3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"get-order-data",
+								"3",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:11:09 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "204"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 1,\n    \"status\": \"waiting\",\n    \"special_requests\": \"Без сахара\",\n    \"created_at\": \"29 May 2023 01:10:53\",\n    \"updated_at\": \"29 May 2023 01:10:53\",\n    \"orderdishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 1,\n            \"price\": \"50.00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Просмотр заказа (в работе)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 2\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/order_handler/get-order-data/3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"get-order-data",
+						"3",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Просмотр заказа (в работе)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 2\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/order_handler/get-order-data/3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"get-order-data",
+								"3",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:11:17 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "208"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 1,\n    \"status\": \"in_progress\",\n    \"special_requests\": \"Без сахара\",\n    \"created_at\": \"29 May 2023 01:10:53\",\n    \"updated_at\": \"29 May 2023 01:10:53\",\n    \"orderdishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 1,\n            \"price\": \"50.00\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Просмотр заказа (выполнен)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 2\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost/order_handler/get-order-data/3/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"order_handler",
+						"get-order-data",
+						"3",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Просмотр заказа (выполнен)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExODU0LCJpYXQiOjE2ODUzMTE1NTQsImp0aSI6IjkxZTRmYTNjZDhlNTQwMDc4ODUwYzhlYzI3Y2MwZjI5IiwidXNlcl9pZCI6MSwiaXNfc3RhZmYiOnRydWV9.YXQ-rS9cKznX7f0URsUnqhiOVmFDEQmKGqeqzVPWQ8o",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"dishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 2\n        }\n    ],\n    \"special_requests\": \"Без соли\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost/order_handler/get-order-data/3/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"order_handler",
+								"get-order-data",
+								"3",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 22:11:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "201"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, Cookie"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"user_id\": 1,\n    \"status\": \"done\",\n    \"special_requests\": \"Без сахара\",\n    \"created_at\": \"29 May 2023 01:10:53\",\n    \"updated_at\": \"29 May 2023 01:10:53\",\n    \"orderdishes\": [\n        {\n            \"dish_id\": 3,\n            \"quantity\": 1,\n            \"price\": \"50.00\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

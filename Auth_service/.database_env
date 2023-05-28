@@ -1,0 +1,3 @@
+POSTGRES_USER=postgres
+POSTGRES_PASSWORD=KihwewehfhH238
+POSTGRES_DB=IDZ_microservices__auth_api_postgres_db

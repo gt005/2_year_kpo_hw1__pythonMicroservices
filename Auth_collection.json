@@ -1,0 +1,879 @@
+{
+	"info": {
+		"_postman_id": "b0409ce9-f1b9-402b-a9bf-cf6c798fc6ac",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26270761"
+	},
+	"item": [
+		{
+			"name": "Регистрация с ошибкой(неправильный email) и пустой пароль",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "first_user",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "kkkkk",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "111",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/auth/sign-up/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"auth",
+						"sign-up",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Регистрация с ошибкой(неправильный email) и пустой пароль",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "first_user",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "kkkkk",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "111",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/auth/sign-up/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"auth",
+								"sign-up",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 20:16:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "145"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"email\": [\n        \"Введите правильный адрес электронной почты.\"\n    ],\n    \"password\": [\n        \"Обязательное поле.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Регистрация правильная",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "first_user",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "first_user@ya.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/auth/sign-up/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"auth",
+						"sign-up",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Регистрация правильная",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "first_user",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "first_user@ya.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/auth/sign-up/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"auth",
+								"sign-up",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 20:17:21 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "21"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"success\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Регистрация с ошибкой (пользователь уже зарегистрирован)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "first_user",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "first_user@ya.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/auth/sign-up/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"auth",
+						"sign-up",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Регистрация с ошибкой (пользователь уже зарегистрирован)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "first_user",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "first_user@ya.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/auth/sign-up/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"auth",
+								"sign-up",
+								""
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 20:18:16 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "153"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": [\n        \"custom user с таким username уже существует.\"\n    ],\n    \"email\": [\n        \"custom user с таким email уже существует.\"\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Регистрация с ошибкой (неправильный пароль)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "first_user@ya.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "24",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/auth/sign-in/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"auth",
+						"sign-in",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Регистрация с ошибкой (неправильный пароль)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "first_user@ya.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "24",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/auth/sign-in/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"auth",
+								"sign-in",
+								""
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 21:47:55 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Bearer realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"No active account found with the given credentials\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Авторизация с ошибкой (неправильный пароль)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "first_user@ya.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "242",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/auth/sign-in/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"auth",
+						"sign-in",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Авторизация с ошибкой",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "first_user@ya.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "242",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/auth/sign-in/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"auth",
+								"sign-in",
+								""
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 21:52:50 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "63"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "WWW-Authenticate",
+							"value": "Bearer realm=\"api\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"detail\": \"No active account found with the given credentials\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Авторизация правильная",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "first_user@ya.ru",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "111",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/auth/sign-in/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"auth",
+						"sign-in",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Авторизация правильная",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "first_user@ya.ru",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "111",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost/auth/sign-in/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"auth",
+								"sign-in",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 21:53:45 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "529"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4NTM5NzIyNSwiaWF0IjoxNjg1MzEwODI1LCJqdGkiOiIzZjhiY2VhZDc5YjA0ZGY1OTYzZmY1M2IwMWI2NWMxYiIsInVzZXJfaWQiOjQsImlzX3N0YWZmIjpmYWxzZX0.fBa8fnt2jA8Ryg-FJhjKFxOlVajA35lSd3mSmT0_-Co\",\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExMTI1LCJpYXQiOjE2ODUzMTA4MjUsImp0aSI6ImU1ZWRiYTI5ZjY5NTRiNTg4MWUyM2I0NzYwNGE3YzEyIiwidXNlcl9pZCI6NCwiaXNfc3RhZmYiOmZhbHNlfQ.JYmjT0f2y2llDboF1vqN5fyOFvYqFiivRjkQuQFhgKM\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Получение информации о пользователе (токен в headers)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExMTI1LCJpYXQiOjE2ODUzMTA4MjUsImp0aSI6ImU1ZWRiYTI5ZjY5NTRiNTg4MWUyM2I0NzYwNGE3YzEyIiwidXNlcl9pZCI6NCwiaXNfc3RhZmYiOmZhbHNlfQ.JYmjT0f2y2llDboF1vqN5fyOFvYqFiivRjkQuQFhgKM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost/auth/get-user-data/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"auth",
+						"get-user-data",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Получение информации о пользователе (токен в headers)",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjg1MzExMTI1LCJpYXQiOjE2ODUzMTA4MjUsImp0aSI6ImU1ZWRiYTI5ZjY5NTRiNTg4MWUyM2I0NzYwNGE3YzEyIiwidXNlcl9pZCI6NCwiaXNfc3RhZmYiOmZhbHNlfQ.JYmjT0f2y2llDboF1vqN5fyOFvYqFiivRjkQuQFhgKM",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost/auth/get-user-data/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"auth",
+								"get-user-data",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Server",
+							"value": "nginx/1.23.4"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 28 May 2023 21:55:27 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "71"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "GET, HEAD, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"username\": \"first_user\",\n    \"email\": \"first_user@ya.ru\",\n    \"is manager\": false\n}"
+				}
+			]
+		}
+	]
+}
